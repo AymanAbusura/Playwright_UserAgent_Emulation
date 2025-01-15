@@ -16,7 +16,7 @@ Make sure you have the following installed:
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/playwright-user-agent-emulation.git
+   git clone https://github.com/AymanAbusura/Playwright_UserAgent_Emulation.git
 
 2. Navigate to the project directory:
     ```bash
