@@ -20,7 +20,7 @@ Make sure you have the following installed:
 
 2. Navigate to the project directory:
     ```bash
-    cd playwright-user-agent-emulation
+    cd Playwright_UserAgent_Emulation
 
 3. Install the necessary dependencies:
     ```bash
