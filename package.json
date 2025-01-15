@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "playwright": "^1.49.1",
+    "yargs": "^17.7.2"
+  }
+}
