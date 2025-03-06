@@ -17,14 +17,15 @@ const argv = yargs(hideBin(process.argv)).argv;
 
         console.log(`Used by User-Agent: ${userAgent || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}`);
 
-        const browser = await chromium.launch({ headless: true }); // Change it to false if you want to run on chroumium
+        const browser = await chromium.launch({ headless: false }); // Change it to false if you want to run on chroumium
         const context = await browser.newContext({
         userAgent: userAgent || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
         });
         const page = await context.newPage();
 
         console.log(`URL: ${url}`);
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
+        // await page.goto(url, { waitUntil: 'domcontentloaded' }); // HTML is fully downloaded and parsed it doesn't wait for Images, JS & CSS
+        await page.goto(url, { waitUntil: 'load' }); // Wait until the page is fully loaded
 
         await page.waitForTimeout(3000); //10000 for 10 second
 
